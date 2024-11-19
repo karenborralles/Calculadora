@@ -3,9 +3,8 @@ from lark import Lark, Transformer
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Esto permite todas las solicitudes CORS desde cualquier origen
+CORS(app)  
 
-# Definir la gramática y crear el parser
 grammar = r"""
     ?start: expr
     ?expr: term
@@ -22,7 +21,6 @@ grammar = r"""
 """
 parser = Lark(grammar, parser='lalr')
 
-# Transformer para construir el árbol
 class TreeBuilder(Transformer):
     def number(self, n):
         return {"type": "number", "value": n[0].value}
@@ -51,7 +49,6 @@ def tree():
         return jsonify({'treeHTML': ''})
 
     try:
-        # Parsear la expresión para construir el árbol
         tree = parser.parse(expression)
         transformed_tree = TreeBuilder().transform(tree)
         tree_html = render_tree(transformed_tree)

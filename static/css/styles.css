@@ -1,29 +1,27 @@
-/* Estilos generales */
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffedf3; /* Fondo pastel */
+    background-color: #ffedf3; 
     font-family: 'Comic Sans MS', 'Arial', sans-serif;
     color: #333;
     margin: 0;
 }
 
-/* Contenedor principal para calculadora y árbol */
 .container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Alinea al inicio verticalmente */
-    justify-content: center; /* Alinea al centro horizontalmente */
-    gap: 40px; /* Espacio entre columnas */
+    align-items: flex-start; 
+    justify-content: center; 
+    gap: 40px;
     width: 90%;
     max-width: 1200px;
 }
 
-/* Estilos de la calculadora */
 .calculator {
-    background-color: #fff4fb; /* Fondo pastel */
+    background-color: #fff4fb;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -31,17 +29,16 @@ body {
 }
 
 input#expression {
-    display: block; /* Asegura que sea un bloque para centrado */
-    margin: 0 auto 20px; /* Auto alinea horizontalmente, con margen inferior */
-    width: calc(100% - 20px); /* Deja espacio a los bordes */
-    padding: 15px;
+    display: block; 
+    margin: 0 auto 20px;
+    width: calc(100% - 20px); 
     font-size: 20px;
-    border: 2px solid #ffa6c9; /* Borde rosa pastel */
+    border: 2px solid #ffa6c9; 
     border-radius: 10px;
     text-align: right;
     background-color: #fff;
     color: #333;
-    box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+    box-sizing: border-box; 
 }
 
 
@@ -56,14 +53,14 @@ button {
     font-size: 18px;
     border: none;
     border-radius: 10px;
-    background-color: #ffa6c9; /* Botones rosas */
+    background-color: #ffa6c9; 
     color: white;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
 }
 
 button:hover {
-    background-color: #ff87b2; /* Hover más oscuro */
+    background-color: #ff87b2; 
     transform: scale(1.1);
 }
 
@@ -72,23 +69,22 @@ button:active {
 }
 
 .tree-btn {
-    grid-column: span 4; /* Botón Tree ocupa toda la fila */
-    background-color: #b28dff; /* Morado pastel */
+    grid-column: span 4; 
+    background-color: #b28dff; 
 }
 
 .tree-btn:hover {
     background-color: #9b72e3;
 }
 
-/* Estilos del árbol */
 .tree-container {
     text-align: center;
-    flex: 1; /* Toma el espacio restante disponible */
+    flex: 1; 
 }
 
 .tree-container h2 {
     font-size: 24px;
-    color: #b28dff; /* Morado pastel */
+    color: #b28dff; 
     margin-bottom: 20px;
 }
 
