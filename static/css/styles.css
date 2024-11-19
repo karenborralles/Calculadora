@@ -1,0 +1,119 @@
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffedf3; /* Fondo pastel */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/* Contenedor principal para calculadora y árbol */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinea al inicio verticalmente */
+    justify-content: center; /* Alinea al centro horizontalmente */
+    gap: 40px; /* Espacio entre columnas */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Estilos de la calculadora */
+.calculator {
+    background-color: #fff4fb; /* Fondo pastel */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+input#expression {
+    display: block; /* Asegura que sea un bloque para centrado */
+    margin: 0 auto 20px; /* Auto alinea horizontalmente, con margen inferior */
+    width: calc(100% - 20px); /* Deja espacio a los bordes */
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid #ffa6c9; /* Borde rosa pastel */
+    border-radius: 10px;
+    text-align: right;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffa6c9; /* Botones rosas */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff87b2; /* Hover más oscuro */
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.tree-btn {
+    grid-column: span 4; /* Botón Tree ocupa toda la fila */
+    background-color: #b28dff; /* Morado pastel */
+}
+
+.tree-btn:hover {
+    background-color: #9b72e3;
+}
+
+/* Estilos del árbol */
+.tree-container {
+    text-align: center;
+    flex: 1; /* Toma el espacio restante disponible */
+}
+
+.tree-container h2 {
+    font-size: 24px;
+    color: #b28dff; /* Morado pastel */
+    margin-bottom: 20px;
+}
+
+.node {
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #ffa6c9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.node.operator {
+    background-color: #b28dff;
+}
+
+.left, .right {
+    display: inline-block;
+    padding-top: 50px;
+}
